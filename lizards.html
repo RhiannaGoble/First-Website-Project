@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--To do: 
+  1. Find out why there is extra padding in navbar of medium-sized screen
+  2.
+-->
+<html lang="en" class="h-full bg-gray-200">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herpetofauna of the UK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<header>
+  <!-- Navbar -->
+<div class="min-h-full">
+    <nav class="bg-lime-300 border-t-4 border-t-gray-300 border-b-4 border-b-gray-300">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
+        <div class="flex h-25 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 hidden lg:block">
+              <!-- hidden lg:block makes the snake icon visible on large screens only. Note from Tailwind docs is that they use mobile-first breakpoint system -->
+              <img class="h-20 w-20" src="https://dl.dropboxusercontent.com/scl/fi/wusrirr63cxtgis2v1c1p/snakeicon.png?rlkey=yd80onnuup9s399tubbs5k57k&dl=0" alt="Snake icon">
+            </div>
+                        <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-950 hover:bg-lime-300 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white rounded-md px-8 py-8 text-xl font-medium" aria-current="page">Home</a>
+                <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Frogs</a>
+                <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Snakes</a>
+                <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Lizards</a>
+                <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Invasive Species</a>
+              </div>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <!-- Mobile menu button -->
+            <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-200 hover:bg-lime-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!-- Menu open: "hidden", Menu closed: "block" -->
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!-- The svg above is the hamburger icon -->
+              <!-- Menu open: "block", Menu closed: "hidden" -->
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="md:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-950 hover:bg-lime-400 hover:text-white" -->
+          <a href="index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+          <a href="frogs.html" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Frogs</a>
+          <a href="snakes.html" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Snakes</a>
+          <a href="lizards.html" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Lizards</a>
+          <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Invasive Species</a>
+        </div>
+        <div class="border-t border-gray-700 pb-3 pt-4">
+          <div class="flex items-center px-5">
+            <div class="flex-shrink-0">
+            </div>
+            <div class="ml-3">
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </nav>
+      <header class="bg-white shadow-xl">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 text-left ml-20 pl-2">Herpetofauna of the UK</h1>
+      </div>
+    </header>
+   </div>
+  </header>
+<body class="h-full">
+  <main class="h-full">
+   
+    <div class="opacity-90 h-full bg-cover bg-scroll ..." style="background-image: url(https://dl.dropboxusercontent.com/scl/fi/0j94ixk8bsr5aq2i99c35/Leaf_litter.jpg?rlkey=0zwywpv3rc1rp992hg0so90mv&dl=0)">
+      
+      <div class="h-full bg-[rgba(0,0,0,0.4)]">
+        <!-- Had to use rgba value rather than opacity-40 as this caused a problem with the text in the div below inheriting the opacity. text-opacity did not help so rgba best workaround -->
+        <div class="h-inherit pt-10 ml-8 pl-40 mx-auto sm:px-6 lg:pl-40 text-lime-500 relative" >
+          <!-- home page description -->  sadjkhkjashdjakshdaskjdhashkjdashkdkjasdkj
+          </div>
+    </div>
+  </div>
+  </div>
+ <!-- /div above is for the background image, so content must be contained within-->
+  </main>
+  </div>
+</body>
+</html>
