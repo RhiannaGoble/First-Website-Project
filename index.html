@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--To do: 
-  1.Remove profile picture and notifications from mobile view
+  1. Find out why there is extra padding in navbar of medium-sized screen
   2.
 -->
 <html lang="en" class="h-full bg-gray-200">
@@ -11,16 +11,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <header>
+  <!-- Navbar -->
 <div class="min-h-full">
-    <nav class="bg-lime-300">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <nav class="bg-lime-300 border-t-4 border-t-gray-300 border-b-4 border-b-gray-300">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
         <div class="flex h-25 items-center justify-between">
           <div class="flex items-center">
             <div class="flex-shrink-0 hidden lg:block">
               <!-- hidden lg:block makes the snake icon visible on large screens only. Note from Tailwind docs is that they use mobile-first breakpoint system -->
-              <img class="h-12 w-12" src="https://dl.dropboxusercontent.com/scl/fi/wusrirr63cxtgis2v1c1p/snakeicon.png?rlkey=yd80onnuup9s399tubbs5k57k&dl=0" alt="Snake icon">
+              <img class="h-20 w-20" src="https://dl.dropboxusercontent.com/scl/fi/wusrirr63cxtgis2v1c1p/snakeicon.png?rlkey=yd80onnuup9s399tubbs5k57k&dl=0" alt="Snake icon">
             </div>
-            <div class="hidden md:block">
+                        <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-950 hover:bg-lime-300 hover:text-white" -->
                 <a href="#" class="bg-gray-900 text-white rounded-md px-8 py-8 text-xl font-medium" aria-current="page">Home</a>
@@ -42,14 +43,10 @@
               </svg>
               <!-- The svg above is the hamburger icon -->
               <!-- Menu open: "block", Menu closed: "hidden" -->
-              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
             </button>
           </div>
         </div>
       </div>
-  
       <!-- Mobile menu, show/hide based on menu state. -->
       <div class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
@@ -71,32 +68,28 @@
         </div>
       </div>
     </nav>
-  
-    <header class="bg-white shadow">
+      <header class="bg-white shadow-xl">
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 text-center">Herpetofauna of the UK</h1>
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 text-left ml-20 pl-2">Herpetofauna of the UK</h1>
       </div>
     </header>
-    <main>
-      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <!-- Your content -->
-      </div>
-      <body>
-    </main>
-  </div>
-  
-</header>
+   </div>
+  </header>
 <body class="h-full">
-  <div class="flex ...">
-    <div class="flex-none w-14 h-14 ... pl-20">
-      01
+  <main class="h-full">
+   
+    <div class="opacity-90 h-full bg-cover bg-scroll ..." style="background-image: url(https://dl.dropboxusercontent.com/scl/fi/0j94ixk8bsr5aq2i99c35/Leaf_litter.jpg?rlkey=0zwywpv3rc1rp992hg0so90mv&dl=0)">
+      
+      <div class="h-full bg-[rgba(0,0,0,0.4)]">
+        <!-- Had to use rgba value rather than opacity-40 as this caused a problem with the text in the div below inheriting the opacity. text-opacity did not help so rgba best workaround -->
+        <div class="h-inherit pt-10 ml-8 pl-40 mx-auto sm:px-6 lg:pl-40 text-lime-500 relative" >
+          <!-- home page description -->  sadjkhkjashdjakshdaskjdhashkjdashkdkjasdkj
+          </div>
     </div>
-    <div class="grow h-14">
-    Text Goes here - This website is a guide to the amphibians and reptiles of the United Kingdom. Identification tips can be found on each page.
-    </div>
-    <div class="flex-none w-14 h-14 ...">
-      03
-    </div>
+  </div>
+  </div>
+ <!-- /div above is for the background image, so content must be contained within-->
+  </main>
   </div>
 </body>
 </html>
