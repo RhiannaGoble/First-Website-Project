@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--To do: 
-  1. Find out why there is extra padding in navbar of medium-sized screen
-  2. Why is flexbox not working with the image and text on home screen?
+  1. Find out why there is extra padding in navbar of medium-sized screen - DONE (truncated page title that was going onto 2 lines)
+  2. Why is flexbox not working with the image and text on home screen? - DONE (wrap was set to no)
   3. Change mobile menu
 -->
 <html lang="en" class="h-full bg-gray-200">
@@ -16,9 +16,9 @@
 <div class="min-h-full">
     <nav class="bg-lime-300 border-t-4 border-t-gray-300 border-b-4 border-b-gray-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
-        <div class="flex h-25 items-center justify-between">
+        <div class="flex h-25 justify-between">
           <div class="flex items-center">
-            <div class="flex-shrink-0 hidden lg:block">
+            <div class="flex-shrink-0 hidden md:block">
               <!-- hidden lg:block makes the snake icon visible on large screens only. Note from Tailwind docs is that they use mobile-first breakpoint system -->
               <img class="h-20 w-20" src="https://dl.dropboxusercontent.com/scl/fi/wusrirr63cxtgis2v1c1p/snakeicon.png?rlkey=yd80onnuup9s399tubbs5k57k&dl=0" alt="Snake icon">
             </div>
@@ -29,22 +29,11 @@
                 <a href="frogs.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Frogs</a>
                 <a href="snakes.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Snakes</a>
                 <a href="lizards.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Lizards</a>
-                <a href="invasives.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Invasive Species</a>
+                <a href="invasives.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium truncate">Invasive Species</a>
               </div>
             </div>
           </div>
           <div class="-mr-2 flex md:hidden">
-            <!-- Mobile menu button -->
-            <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-200 hover:bg-lime-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <!-- Menu open: "hidden", Menu closed: "block" -->
-              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <!-- The svg above is the hamburger icon -->
-              <!-- Menu open: "block", Menu closed: "hidden" -->
-            </button>
           </div>
         </div>
       </div>
@@ -53,13 +42,12 @@
       <div class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-950 hover:bg-lime-400 hover:text-white" -->
-          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
-          <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Frogs</a>
-          <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Snakes</a>
-          <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Lizards</a>
-          <a href="#" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Invasive Species</a>
+          <a href="index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+          <a href="frogs.html" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Frogs</a>
+          <a href="snakes.html" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Snakes</a>
+          <a href="lizards.html" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Lizards</a>
+          <a href="invasives.html" class="text-gray-950 hover:bg-lime-400 hover:text-black block rounded-md px-3 py-2 text-base font-medium">Invasive Species</a>
         </div>
-        <div class="border-t border-gray-700 pb-3 pt-4">
           <div class="flex items-center px-5">
             <div class="flex-shrink-0">
             </div>
@@ -72,7 +60,7 @@
     </nav>
       <header class="bg-white shadow-xl">
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 text-left ml-20 pl-8">Herpetofauna of the UK</h1>
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 md:text-left md:mx-20 md:px-10">Herpetofauna of the UK</h1>
       </div>
     </header>
    </div>
@@ -85,13 +73,14 @@
       <div class="h-screen bg-[rgba(0,0,0,0.4)]">
         <!-- line above is the black layer to make background less ugly -->
         <!-- Had to use rgba value rather than opacity-40 as this caused a problem with the text in the div below inheriting the opacity. text-opacity did not help so rgba best workaround -->
-        <div class="pt-10 ml-14 mr-14  pl-40 pr-40 mx-auto sm:px-6 lg:pl-40 text-black font-sans text-xl relative" >
-          <div class="flex flex-row flex-nowrap justify-between bg-gray-300 shadow-xl rounded-xl border-solid border-2 border-gray-950">
+        <div class="px-auto py-5 mx:auto my:auto sm:px-6 lg:px-40 text-black font-sans text-xl relative" >
+          <!-- Why is pr in line above not affecting anything?-->
+          <div class="flex flex-row md:flex-nowrap flex-wrap justify-between bg-gray-300 shadow-xl rounded-xl border-solid border-2 border-gray-950 lead-relaxed">
             <!-- Home page description -->
-            <div class="gap-20 pr-20 pl-10 pt-5"><p>This site provides a basic guide to the amphibians and reptiles of the UK. Identification tips can be found on each page. <br><br>There are a total of 13 native herp species in the UK, of which 7 are amphibians, and 6 are reptiles.</br></br></p></div>
+            <div class="mx-auto my:auto px-20 py-10 text-justify md:border-r-2 border-gray-400"><p>This site provides a basic guide to the amphibians and reptiles of the UK. Identification tips can be found on each page. <br><br>There are a total of 13 native herp species in the UK, of which 7 are amphibians, and 6 are reptiles.</br></br></p></div>
             <!-- Home page image, should be positioned on right once I have figured out how to resize it -->
-            <div class="pr-10 pt-5 position-right inset-y-0 right-0"><img class="md:w-1/2 lg... rounded-xl border-solid border-4 border-gray-950" src="https://dl.dropboxusercontent.com/scl/fi/b3ut0co0oiq7asxh7xwl2/audrey.jpg?rlkey=ehyhe2sdymfhmwrczpltys47p&dl=0" alt="Great crested newt in a gloved hand">Great crested newt</div>
-            <!--  -->
+            <div class="py-10 text-center"><img class="mx-auto my-auto md:w-1/2 lg... rounded-xl border-solid border-4 border-gray-950" src="https://dl.dropboxusercontent.com/scl/fi/b3ut0co0oiq7asxh7xwl2/audrey.jpg?rlkey=ehyhe2sdymfhmwrczpltys47p&dl=0" alt="Great crested newt in a gloved hand"></div>
+          <!-- lg:basis-1/2 in the image's class looked a bit too small -->
           </div>
           </div>
     </div>
