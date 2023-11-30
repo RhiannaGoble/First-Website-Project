@@ -29,7 +29,7 @@
                 <a href="snakes.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Snakes</a>
                 <a href="lizards.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Lizards</a>
                 
-                <a href="invasives.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium">Invasive Species</a>
+                <a href="invasives.html" class="text-gray-950 hover:bg-lime-400 hover:text-black rounded-md px-8 py-8 text-xl font-medium truncate">Invasive Species</a>
               </div>
             </div>
           </div>
@@ -56,25 +56,30 @@
         </div>
       </div>
     </nav>
-      <header class="bg-white shadow-xl">
+    <header class="bg-white shadow-xl">
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 text-left ml-20 pl-8">Herpetofauna of the UK</h1>
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 md:text-left md:mx-20 md:px-10">Herpetofauna of the UK</h1>
       </div>
     </header>
    </div>
   </header>
-<body class="h-full">
-  <main class="h-full">
-   
-    <div class="opacity-90 h-full bg-cover bg-scroll ..." style="background-image: url(https://dl.dropboxusercontent.com/scl/fi/0j94ixk8bsr5aq2i99c35/Leaf_litter.jpg?rlkey=0zwywpv3rc1rp992hg0so90mv&dl=0)">
-      
-      <div class="h-full bg-[rgba(0,0,0,0.4)]">
+<body class="h-screen">
+  <main class="h-screen">
+    <div class="opacity-90 h-full bg-cover bg-scroll ..." style="background-image: url(https://dl.dropboxusercontent.com/scl/fi/0j94ixk8bsr5aq2i99c35/Leaf_litter.jpg?rlkey=0zwywpv3rc1rp992hg0so90mv&dl=0)" alt="leaf litter background">
+      <div class="h-screen bg-[rgba(0,0,0,0.4)] py-10 border-t-4 border-solid border-t-gray-950">
+        <!-- line above is the black layer to make background less ugly -->
         <!-- Had to use rgba value rather than opacity-40 as this caused a problem with the text in the div below inheriting the opacity. text-opacity did not help so rgba best workaround -->
-        <div class="h-inherit pt-10 ml-8 pl-40 mx-auto sm:px-6 lg:pl-40 text-lime-500 relative" >
-          <!-- home page description -->  sadjkhkjashdjakshdaskjdhashkjdashkdkjasdkj
+          <div class="flex flex-wrap rounded-xl px-10 py-10 sm:mx-10 md:mx-20 lg:mx-30 2xl:mx-60 my-0 text-black font-sans text-xl border-solid border-4 border-gray-950 text-center gap-10 bg-gray-300 place-content-center">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/hl3g0dxrmqariz1h2owre/commonfrog.jpg?rlkey=uoe6t6u8zv98q0t2g7l1ujem9&dl=0" alt="common frog" class="w-1/3 mt-0 w-60 object-cover border-2 border-gray-950 rounded-xl">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/619ymr6bf8q1nx8qh5sf4/commontoad.jpg?rlkey=p9cye83lpb6x9ygf09hlzqxau&dl=0" alt="common toad" class="w-1/3 mt-0 w-60 object-cover border-2 border-gray-950 rounded-xl">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/l7h221jpnis8isddsxbao/marshfrog.jpg?rlkey=p50b2sfyil9zslin26ucupe7h&dl=0" alt="pool frog" class="w-1/3 mt-0 w-60 object-cover border-2 border-gray-950 rounded-xl">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/nqicydt9a1r1z1s4gh55u/Natterjack.png?rlkey=fb0928rxyzicbm2r862yb7e6h&dl=0" alt="natterjack toad" class="w-1/3 mt-0 w-60 object-cover border-2 border-gray-950 rounded-xl">
+            <div class="w-1/3 mt-0 w-60 object-cover"></div>
+            <div class="w-1/3 mt-0 w-60 object-cover"></div>
           </div>
-    </div>
+          <div class="grid-cols-3"></div>
   </div>
+ 
   </div>
  <!-- /div above is for the background image, so content must be contained within-->
   </main>
