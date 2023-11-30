@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!--To do: 
   1. Find out why there is extra padding in navbar of medium-sized screen
-  2.
+  2. Why is flexbox not working with the image and text on home screen?
+  3. Change mobile menu
 -->
 <html lang="en" class="h-full bg-gray-200">
 <head>
@@ -48,6 +49,7 @@
         </div>
       </div>
       <!-- Mobile menu, show/hide based on menu state. -->
+      <!-- TO DO: Add links. Or just a hamburger menu instead? -->
       <div class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-950 hover:bg-lime-400 hover:text-white" -->
@@ -70,20 +72,26 @@
     </nav>
       <header class="bg-white shadow-xl">
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 text-left ml-20 pl-2">Herpetofauna of the UK</h1>
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 text-left ml-20 pl-8">Herpetofauna of the UK</h1>
       </div>
     </header>
    </div>
   </header>
-<body class="h-full">
-  <main class="h-full">
+<body class="h-screen">
+  <main class="h-screen">
    
     <div class="opacity-90 h-full bg-cover bg-scroll ..." style="background-image: url(https://dl.dropboxusercontent.com/scl/fi/0j94ixk8bsr5aq2i99c35/Leaf_litter.jpg?rlkey=0zwywpv3rc1rp992hg0so90mv&dl=0)">
       
-      <div class="h-full bg-[rgba(0,0,0,0.4)]">
+      <div class="h-screen bg-[rgba(0,0,0,0.4)]">
+        <!-- line above is the black layer to make background less ugly -->
         <!-- Had to use rgba value rather than opacity-40 as this caused a problem with the text in the div below inheriting the opacity. text-opacity did not help so rgba best workaround -->
-        <div class="h-inherit pt-10 ml-8 pl-40 mx-auto sm:px-6 lg:pl-40 text-lime-500 relative" >
-          <!-- home page description -->  sadjkhkjashdjakshdaskjdhashkjdashkdkjasdkj
+        <div class="h-inherit pt-10 ml-14 mr-20  pl-40 pr-40 mx-auto sm:px-6 lg:pl-40 text-lime-500 relative" >
+          <div class="flex flex-row justify-between bg-gray-300 rounded-xl">
+            <!-- Home page description -->
+            <div class="gap-3"><p>djkhkjashdjakshdaskjdhashkjdashkdk</p></div>
+            <!-- Home page image, should be positioned on right once I have figured out how to resize it -->
+            <div><img class="position-right inset-y-0 right-0 md:w-1/2 lg... rounded-xl border-solid border-4 border-gray-950" src="https://dl.dropboxusercontent.com/scl/fi/b3ut0co0oiq7asxh7xwl2/audrey.jpg?rlkey=ehyhe2sdymfhmwrczpltys47p&dl=0">djkhkjashdjakshdaskjdhashkjdashkdk</div>
+          </div>
           </div>
     </div>
   </div>
